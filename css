@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f06, #f79);
+    color: white;
+}
+.container {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+.screen {
+    display: none;
+}
+.active {
+    display: block;
+}
+#current-time {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: pulse 2s infinite;
+}
+#current-date {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+button, input[type="time"], select, input[type="checkbox"] {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.alarm-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+.alarm-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.toggle-alarm {
+    margin-left: 10px;
+}
+.weekdays {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+.weekdays label {
+    margin: 0 5px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
