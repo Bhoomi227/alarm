@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock App</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div class="screen active" id="home-screen">
+            <h1 id="current-time"></h1>
+            <p id="current-date"></p>
+            <button onclick="showScreen('set-alarm-screen')">Set New Alarm</button>
+            <button onclick="showScreen('manage-alarms-screen')">Manage Alarms</button>
+        </div>
+
+        <!-- Set Alarm Screen -->
+        <div class="screen" id="set-alarm-screen">
+            <h2>Set Alarm</h2>
+            <label for="alarm-time">Alarm Time:</label>
+            <input type="time" id="alarm-time">
+            <label for="alarm-tone">Alarm Tone:</label>
+            <select id="alarm-tone">
+                <option value="default">Default</option>
+                <option value="beep">Beep</option>
+                <option value="chime">Chime</option>
+            </select>
+            <div class="weekdays">
+                <label><input type="checkbox" value="Sun"> Sun</label>
+                <label><input type="checkbox" value="Mon"> Mon</label>
+                <label><input type="checkbox" value="Tue"> Tue</label>
+                <label><input type="checkbox" value="Wed"> Wed</label>
+                <label><input type="checkbox" value="Thu"> Thu</label>
+                <label><input type="checkbox" value="Fri"> Fri</label>
+                <label><input type="checkbox" value="Sat"> Sat</label>
+            </div>
+            <button id="save-alarm">Save Alarm</button>
+            <button onclick="showScreen('home-screen')">Back</button>
+        </div>
+
+        <!-- Manage Alarms Screen -->
+        <div class="screen" id="manage-alarms-screen">
+            <h2>Manage Alarms</h2>
+            <ul class="alarm-list" id="alarm-list"></ul>
+            <button onclick="showScreen('home-screen')">Back</button>
+        </div>
+    </div>
+<script src="Js/script.js"></script>
+</body>
+</html>
